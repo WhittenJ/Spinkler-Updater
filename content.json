@@ -1,0 +1,95 @@
+﻿{
+	"Format": "1.20.0",
+	"ConfigSchema": {
+		"NumSprinklers": {
+			"Default": "2",
+			"Description": "The number of Sprinklers used to update to Quality."
+		},
+		"QualityUnlock": {
+			"AllowValues": "0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10",
+			"Default": "6",
+			"Description": "Farming Skill required to unlock Sprinkler to Quality update."
+		},
+		"QualityMaterials": {
+			"AllowValues": "None, Bar, Other",
+			"Default": "Bar",
+			"Description": "Additional item required to craft Quality Sprinkler (Update)."
+		},
+		"NumQualitySprinklers": {
+			"Default": "3",
+			"Description": "The number of Quality Sprinklers used to update to Iridium."
+		},
+		"IridiumUnlock": {
+			"AllowValues": "0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10",
+			"Default": "9",
+			"Description": "Farming Skill required to unlock Quality to Iridium update."
+		},
+		"IridiumMaterials": {
+			"AllowValues": "None, Bar, Other",
+			"Default": "Other",
+			"Description": "Additional item required to craft Iridium Sprinkler (Update)."
+		},
+	},
+	"Changes": [
+	{	  	
+		"Action": "EditData",
+		"Target": "Data/CraftingRecipes",
+		"Entries": {
+			"Quality Sprinker (Update)": "599 {{NumSprinklers}}/Home/621/false/Farming {{QualityUnlock}}",
+		},
+		"When": {
+			"QualityMaterials": "None"
+		}
+	},
+	{	  	
+		"Action": "EditData",
+		"Target": "Data/CraftingRecipes",
+		"Entries": {
+			"Quality Sprinker (Update)": "599 {{NumSprinklers}} 336 1/Home/621/false/Farming {{QualityUnlock}}",
+		},
+		"When": {
+			"QualityMaterials": "Bar"
+		}
+	},
+	{	  	
+		"Action": "EditData",
+		"Target": "Data/CraftingRecipes",
+		"Entries": {
+			"Quality Sprinker (Update)": "599 {{NumSprinklers}} 338 1/Home/621/false/Farming {{QualityUnlock}}",
+		},
+		"When": {
+			"QualityMaterials": "Other"
+		}
+	},
+	{	  	
+		"Action": "EditData",
+		"Target": "Data/CraftingRecipes",
+		"Entries": {
+			"Iridium Sprinker (Update)": "621 {{NumQualitySprinklers}}/Home/645/false/Farming {{IridiumUnlock}}"
+		},
+		"When": {
+			"IridiumMaterials": "None"
+		}
+	},
+	{	  	
+		"Action": "EditData",
+		"Target": "Data/CraftingRecipes",
+		"Entries": {
+			"Iridium Sprinker (Update)": "621 {{NumQualitySprinklers}} 337 1/Home/645/false/Farming {{IridiumUnlock}}"
+		},
+		"When": {
+			"IridiumMaterials": "Bar"
+		}
+	},
+	{	  	
+		"Action": "EditData",
+		"Target": "Data/CraftingRecipes",
+		"Entries": {
+			"Iridium Sprinker (Update)": "621 {{NumQualitySprinklers}} 787 1/Home/645/false/Farming {{IridiumUnlock}}"
+		},
+		"When": {
+			"IridiumMaterials": "Other"
+		}
+	}
+   ]
+  }

@@ -1,0 +1,11 @@
+{
+   "Name": "SprinklerUpdater",
+   "Author": "UnknownLegacy",
+   "Version": "1.2.0",
+   "Description": "Use your old sprinklers to upgrade.",
+   "UniqueID": "UnknownLegacy.SprinklerUpdater",
+   "UpdateKeys": [ "Nexus:7906" ],
+   "ContentPackFor": {
+      "UniqueID": "Pathoschild.ContentPatcher"
+   }
+}
